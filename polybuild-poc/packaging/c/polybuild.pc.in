@@ -1,0 +1,10 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+exec_prefix=${prefix}
+includedir=${prefix}/include
+libdir=${exec_prefix}/lib
+
+Name: polybuild
+Description: Polymorphic Build Orchestrator
+Version: @PROJECT_VERSION@
+Libs: -L${libdir} -lpolybuild-core -lnlink
+Cflags: -I${includedir}/polybuild

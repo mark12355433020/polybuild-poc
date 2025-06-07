@@ -1,0 +1,6 @@
+#!/bin/bash
+# NLink Mock for PolyBuild POC Development
+echo "NLink Mock v1.3.0 - Deterministic Linking"
+echo "Arguments: $@"
+echo "Status: LINKING_SUCCESS"
+exit 0
