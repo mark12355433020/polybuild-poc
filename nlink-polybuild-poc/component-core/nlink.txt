@@ -1,0 +1,10 @@
+[component]
+name = polybuild_core
+version = 1.0.0
+type = core_library
+
+[compilation]
+optimization_level = 3
+max_compile_time = 60
+parallel_allowed = true
+single_pass_mode = true

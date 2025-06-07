@@ -1,0 +1,20 @@
+[component]
+name = polybuild_cli
+version = 1.0.0
+type = executable
+
+[compilation]
+optimization_level = 2
+max_compile_time = 60
+parallel_allowed = true
+single_pass_mode = true
+
+[linking]
+libraries = polybuild_resolver polybuild_orchestrator polybuild_core
+library_path = ../artifacts
+output_name = polybuild
+
+[polybuild]
+self_orchestration = true
+nlink_integration = true
+linker_flags = -lpolybuild

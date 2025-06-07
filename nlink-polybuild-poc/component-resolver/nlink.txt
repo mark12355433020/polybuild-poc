@@ -1,0 +1,20 @@
+[component]
+name = polybuild_resolver
+version = 2.1.0
+type = core_library
+
+[compilation]
+optimization_level = 3
+max_compile_time = 90
+parallel_allowed = true
+single_pass_mode = true
+
+[dependencies]
+shared_configs = ../shared/configs/compiler.nlink
+common_headers = ../shared/headers/polybuild_common.h
+
+[cost_analysis]
+complexity_weight = 0.3
+dependency_weight = 0.2
+memory_weight = 0.3
+temporal_weight = 0.2

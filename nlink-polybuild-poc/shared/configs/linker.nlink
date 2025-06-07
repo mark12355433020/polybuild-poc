@@ -1,0 +1,15 @@
+[linker]
+mode = static
+threading = -pthread
+math = -lm
+debug_info = true
+
+[polybuild]
+self_orchestration = true
+libpolybuild_path = ../artifacts/libpolybuild.a
+nlink_integration = true
+
+[export]
+symbols = polybuild_*
+visibility = hidden
+strip_unused = true

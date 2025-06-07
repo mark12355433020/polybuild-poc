@@ -1,0 +1,19 @@
+[component]
+name = polybuild_orchestrator
+version = 1.5.0
+type = core_library
+
+[compilation]
+optimization_level = 3
+max_compile_time = 120
+parallel_allowed = true
+single_pass_mode = true
+
+[dependencies]
+resolver = ../component-resolver
+shared_configs = ../shared/configs/linker.nlink
+
+[orchestration]
+nlink_integration = true
+polybuild_mode = true
+component_coordination = true

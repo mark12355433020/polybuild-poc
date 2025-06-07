@@ -1,0 +1,14 @@
+[project]
+name = demo_test_project
+version = 0.1.0
+entry_point = main.c
+
+[build]
+pass_mode = single
+experimental_mode = false
+strict_mode = true
+
+[features]
+unicode_normalization = true
+isomorphic_reduction = true
+debug_symbols = true

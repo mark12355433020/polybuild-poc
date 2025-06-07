@@ -1,0 +1,17 @@
+[compiler]
+standard = c99
+optimization = -O2
+warnings = -Wall -Wextra -Wpedantic -Werror
+includes = -I../shared/headers -I./include
+position_independent = true
+
+[sinphase]
+single_pass_required = true
+cost_monitoring = true
+isolation_threshold = 0.5
+
+[security]
+stack_protection = true
+fortify_source = true
+relro = true
+no_execute = true

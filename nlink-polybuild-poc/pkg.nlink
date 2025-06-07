@@ -1,0 +1,35 @@
+[project]
+name = polybuild_nlink_poc
+version = 1.0.0
+entry_point = component-cli/src/main.c
+
+[build]
+pass_mode = multi
+experimental_mode = true
+strict_mode = true
+orchestrator = nlink
+
+[threading]
+worker_count = 4
+queue_depth = 64
+stack_size_kb = 512
+enable_work_stealing = true
+
+[features]
+unicode_normalization = true
+isomorphic_reduction = true
+debug_symbols = true
+ast_optimization = true
+component_isolation = true
+
+[nlink]
+linker_path = ./shared/nlink
+cost_threshold = 0.5
+sinphase_mode = true
+deterministic_builds = true
+
+[components]
+resolver = component-resolver
+orchestrator = component-orchestrator
+cli = component-cli
+core = component-core
